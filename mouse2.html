@@ -1,0 +1,38 @@
+
+
+<!doctype html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/mystyles.css" />
+</head>
+
+<body ng-app="">
+
+<h3>Test new</h3>
+
+<div ng-mousemove="count = 1" ng-init="count=0" ng-mouseclick="count = 777" >Box1</div>
+<div ng-mousemove="count = 2" ng-init="count=0">Box2</div>
+<div ng-mousemove="count = 3" ng-init="count=0">Box3</div>
+
+
+<h1>{{count}}</h1>
+
+<div ng-app="circles" ng-controller="MainCtrl">
+    <svg ng-attr-height="300" ng-attr-width="300">
+      <g ng-attr-fill="red">
+        <circle ng-repeat="circle in circles" 
+            ng-attr-cx="100" 
+            ng-attr-cy="100" 
+            ng-attr-r="30">
+        </circle>
+      </g>
+    </svg>  
+</div>
+
+
+
+
+</body>
+</html>
